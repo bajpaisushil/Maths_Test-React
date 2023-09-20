@@ -7,6 +7,8 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
+Live at: https://maths-test-react.vercel.app/
+
 Steps to run the Application on your Local Machine -:
 1. Clone the repository to your local machine:
    git clone git@github.com:bajpaisushil/Maths_Test-React.git
