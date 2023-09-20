@@ -22,12 +22,17 @@ const Landing = () => {
 
   const handleStartTest=(e)=>{
     e.preventDefault();
+    if(selectedIds?.length===0){
+      return (
+        alert("Select atleast one of the Topics to Proceed!")
+      )
+    }
     dispatch(setDetails({name, selectedIds}));
     nav("/test");
   }
 
   return (
-    <div className="flex flex-col justify-center items-center p-[3rem] w-[100%] bg-yellow-50 h-fit py-[4rem] mx-auto">
+    <div className="flex flex-col justify-center items-center p-[3rem] w-[100%] bg-blue-100 h-fit py-[4rem] mx-auto">
       <h1 className="text-[2rem] mb-[1rem] font-bold text-center">
         Welcome to NioClass
       </h1>
@@ -38,9 +43,10 @@ const Landing = () => {
             <input
               type="text"
               name="name"
-              className="w-fit bg-yellow-50 ml-[1rem] h-[2.5rem] my-[1rem] border-[2px] rounded-md border-gray-800 px-[0.3rem]"
+              className="w-fit bg-blue-100 ml-[1rem] h-[2.5rem] my-[1rem] border-[2px] rounded-md border-gray-800 px-[0.3rem]"
               placeholder="Enter Your Name"
               value={name}
+              required
               onChange={(e) => setName(e.target.value)}
             />
           </div>
@@ -157,7 +163,7 @@ const Landing = () => {
           </div>
           <br />
         </div>
-        <button onClick={handleStartTest} className="text-[1.5rem] font-semibold text-white p-[0.3rem] bg-red-500 rounded-md lg:absolute top-[90vh] left-[80%]">Start Test</button>
+        <button onClick={handleStartTest} className="text-[1.5rem] font-semibold text-white p-[0.3rem] bg-blue-700 rounded-md lg:absolute top-[90vh] left-[80%]">Start Test</button>
       </form>
     </div>
   );
